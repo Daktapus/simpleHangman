@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">s155891 - Hangman</string>
+
+    <string name="s_t_IDandName">Z. A. Benjamin Damore - s155891</string>
+    <string name="s_t_aflevering_2">Hangman</string>
+
+    <string name="s_b_play_game">Play</string>
+    <string name="s_b_guess_letter">Guess</string>
+    <string name="s_b_give_up">I give up</string>
+    <string name="s_t_guessLetter_blank"></string>
+    <string name="s_t_guessLetter">Guess a letter</string>
+    <string name="s_t_guessLetter_wrong">You guessed right</string>
+    <string name="s_t_guessLetter_right">You guessed wrong</string>
+    <string name="s_t_guessLetter_won">You won!</string>
+    <string name="s_t_guessLetter_lost">You lost</string>
+
+
+</resources>
