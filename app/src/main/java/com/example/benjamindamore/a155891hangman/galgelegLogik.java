@@ -21,6 +21,17 @@ public class galgelegLogik {
         private boolean spilletErVundet;
         private boolean spilletErTabt;
 
+    //create an object of SingleObject
+    private static galgelegLogik instance = new galgelegLogik();
+
+    //make the constructor private so that this class cannot be
+    //instantiated
+
+    //Get the only object available
+    public static galgelegLogik getInstance(){
+        return instance;
+    }
+
 
         public ArrayList<String> getBrugteBogstaver() {
             return brugteBogstaver;
@@ -54,7 +65,10 @@ public class galgelegLogik {
             return spilletErTabt || spilletErVundet;
         }
 
-        public galgelegLogik() {
+
+        // Vi udkommentere ikke det nedestående i tilfælde af offline brug
+
+         public galgelegLogik() {
             muligeOrd.add("bil");
             muligeOrd.add("computer");
             muligeOrd.add("programmering");

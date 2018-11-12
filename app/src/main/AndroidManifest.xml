@@ -22,6 +22,18 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name="com.example.benjamindamore.a155891hangman.tabtActivity">
+        </activity>
+        <activity
+            android:name="com.example.benjamindamore.a155891hangman.VundetActivity">
+        </activity>
+        <activity
+            android:name="com.example.benjamindamore.a155891hangman.ScoreActivity">
+        </activity>
+
+
+
     </application>
 
 </manifest>

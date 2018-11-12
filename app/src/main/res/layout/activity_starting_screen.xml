@@ -6,14 +6,43 @@
     android:layout_height="match_parent"
     android:background="@android:color/holo_blue_light"
     android:backgroundTint="@android:color/holo_blue_light"
+    tools:ignore="ExtraText"
     tools:layout_editor_absoluteY="25dp">
+
+    <Button
+        android:id="@+id/regler"
+        android:layout_width="143dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="Regler"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.795" />
+
+    <Button
+        android:id="@+id/highscore"
+        android:layout_width="143dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="Highscore"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.653" />
 
     <Button
         android:id="@+id/start"
         android:layout_width="143dp"
         android:layout_height="52dp"
         android:layout_marginBottom="241dp"
-        android:text="Click me"
+        android:text="SPIL"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

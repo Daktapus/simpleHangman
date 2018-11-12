@@ -1,6 +1,8 @@
 package com.example.benjamindamore.a155891hangman;
 
 import android.content.Context;
+import android.content.Intent;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -17,9 +19,11 @@ public class Hangman extends AppCompatActivity implements View.OnClickListener {
     Button button1, button2, button3;
     TextView textView, gameInfo;
     ImageView hangMan;
-    galgelegLogik logik = new galgelegLogik();
+    galgelegLogik logik;
     EditText letterGuess;
     InputMethodManager inputManager;
+    public galgelegLogik g = galgelegLogik.getInstance();
+
 
 
     @Override
@@ -27,6 +31,27 @@ public class Hangman extends AppCompatActivity implements View.OnClickListener {
         super.onCreate(savedInstanceState);
         //set default view til starting screen
         setContentView(R.layout.activity_main);
+        logik = new galgelegLogik();
+
+        //ASYNCTASK, TJEKKER OM ORDNE BLIVER HENTET ORDENTLIGT OG GIVER LISTE.
+
+        new AsyncTask() {
+            @Override
+            protected Object doInBackground(Object... arg0) {
+                try {
+                    logik.hentOrdFraDr();
+                    return "Ordene blev korrekt hentet fra DR's server";
+                } catch (Exception e) {
+                    e.printStackTrace();
+                    return "Ordene blev ikke hentet korrekt: "+e;
+                }
+            }
+
+            @Override
+            protected void onPostExecute(Object resultat) {
+                System.out.println("resultat: \n" + resultat);
+            }
+        }.execute();
 
         //stackoverflow solution to hiding keyboard on buttonclick (https://stackoverflow.com/questions/3400028/close-virtual-keyboard-on-button-press)
         inputManager = (InputMethodManager)
@@ -83,7 +108,7 @@ public class Hangman extends AppCompatActivity implements View.OnClickListener {
 
                 String bogstav = letterGuess.getText().toString();
                 if (bogstav.length() != 1) {
-                    textView.setText("Write one word");
+                    textView.setText("Write one letter");
                     return;
                 }
                 logik.gætBogstav(bogstav);
@@ -119,9 +144,15 @@ public class Hangman extends AppCompatActivity implements View.OnClickListener {
 
         if (logik.erSpilletVundet()) {
             gameInfo.append("\nYou won");
+            StartingScreen.liste.add(new ListItemObject(score(), g.getOrdet(), g.getAntalForkerteBogstaver()));
+            Intent e = new Intent(this,VundetActivity.class);
+            startActivity(e);
         }
         if (logik.erSpilletTabt()) {
-            gameInfo.setText("You lost. THe word was: " + logik.getOrdet());
+            gameInfo.setText("You lost. The word was: " + logik.getOrdet());
+            StartingScreen.liste.add(new ListItemObject(score(), g.getOrdet(), g.getAntalForkerteBogstaver()));
+            Intent e = new Intent(this,tabtActivity.class);
+            startActivity(e);
         }
         switch (logik.getAntalForkerteBogstaver()) {
             case 0:
@@ -147,9 +178,15 @@ public class Hangman extends AppCompatActivity implements View.OnClickListener {
                 break;
             case 7:
                 Toast.makeText(this, "You lost", Toast.LENGTH_SHORT).show();
+                Intent e = new Intent(this,tabtActivity.class);
+                startActivity(e);
                 break;
             default:
                 Toast.makeText(this, "Default hit", Toast.LENGTH_SHORT).show();
         }
     }
+    private int score (){
+        return g.getOrdet().length()*5;
+    }
+
 }
