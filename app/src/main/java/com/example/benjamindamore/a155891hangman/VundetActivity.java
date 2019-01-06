@@ -55,7 +55,7 @@ public class VundetActivity extends AppCompatActivity implements View.OnClickLis
     @Override
     public void onClick(View v) {
         if(v==score) {
-            won.setText("Du har vundet");
+            won.setText("Du har vundet!!");
             Intent won = new Intent(VundetActivity.this, ScoreActivity.class);
             this.startActivity(won);
         }

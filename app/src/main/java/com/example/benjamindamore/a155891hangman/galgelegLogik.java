@@ -92,6 +92,15 @@ public class galgelegLogik {
             opdaterSynligtOrd();
         }
 
+    public void nulstilMedOrd(int pos){
+        brugteBogstaver.clear();
+        antalForkerteBogstaver = 0;
+        spilletErVundet = false;
+        spilletErTabt = false;
+        ordet = muligeOrd.get(pos);
+        opdaterSynligtOrd();
+    }
+
 
         private void opdaterSynligtOrd() {
             synligtOrd = "";
