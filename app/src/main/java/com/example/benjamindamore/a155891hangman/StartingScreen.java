@@ -15,7 +15,7 @@ import java.util.Set;
 
 public class StartingScreen extends AppCompatActivity implements View.OnClickListener {
     public static List liste = new ArrayList<ListItemObject>();
-    public Set<String> save=new HashSet<String>(liste);
+    public Set<String> save = new HashSet<String>(liste);
 
     Button button1;
     Button button2;
@@ -40,37 +40,19 @@ public class StartingScreen extends AppCompatActivity implements View.OnClickLis
 
     @Override
     public void onClick(View kkk) {
-        if(kkk==button1)    {
+        if (kkk == button1) {
             Intent i = new Intent(StartingScreen.this, SpilvalgActivity.class);
             StartingScreen.this.startActivity(i);
 
-        }   else if (kkk==button2){
+        } else if (kkk == button2) {
             Intent j = new Intent(StartingScreen.this, ScoreActivity.class);
             StartingScreen.this.startActivity(j);
 
-        }   else if (kkk==button3){
+        } else if (kkk == button3) {
             AlertDialog.Builder dialog = new AlertDialog.Builder(this);
             dialog.setTitle("Spillets regler");
             dialog.setMessage("Dette spil går ud på at gætte det skjulte ord. Hver stjerne symboliserer et bogstav. Hvis det bogstav der gættes på findes i ordet, vil bogstavet erstatte stjernen på den rette placering i ordet. Gættes der derimod på det forkerte bogstav, vil der blive tegnet en del af den hængende mand. Når hele manden er tegnet, og ordet ikke er gættet, er spillet tabt. Gætter man ordet inden manden bliver hængt, er spillet vundet");
             dialog.show();
         }
-        }
-
-//ITERATION 1 STARTING SCREEN. IGNORE
-
-        /*switch(kkk.getId()){
-            case  R.id.start:
-                Intent e = new Intent(this,Hangman.class);
-                startActivity(e);
-                break;
-
-            case R.id.highscore:
-                Intent f = new Intent(this, ScoreActivity.class);
-                startActivity(f);
-                break;
-
-            default:
-                Toast.makeText(this, "Default hit", Toast.LENGTH_SHORT).show();
-                break;
-        }*/
     }
+}

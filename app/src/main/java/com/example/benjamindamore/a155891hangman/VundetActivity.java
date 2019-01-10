@@ -58,10 +58,12 @@ public class VundetActivity extends AppCompatActivity implements View.OnClickLis
             won.setText("Du har vundet!!");
             Intent won = new Intent(VundetActivity.this, ScoreActivity.class);
             this.startActivity(won);
+            finish();
         }
         else if (v==menu){
             Intent menu = new Intent (VundetActivity.this, StartingScreen.class);
             this.startActivity(menu);
+            finish();
         }
         finish();
     }

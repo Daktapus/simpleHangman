@@ -49,20 +49,12 @@ public class galgelegLogik {
             return antalForkerteBogstaver;
         }
 
-        public boolean erSidsteBogstavKorrekt() {
-            return sidsteBogstavVarKorrekt;
-        }
-
         public boolean erSpilletVundet() {
             return spilletErVundet;
         }
 
         public boolean erSpilletTabt() {
             return spilletErTabt;
-        }
-
-        public boolean erSpilletSlut() {
-            return spilletErTabt || spilletErVundet;
         }
 
 
@@ -138,17 +130,6 @@ public class galgelegLogik {
             }
             opdaterSynligtOrd();
         }
-
-        /*public void logStatus() {
-            System.out.println("---------- ");
-            System.out.println("- ordet (skult) = " + ordet);
-            System.out.println("- synligtOrd = " + synligtOrd);
-            System.out.println("- forkerteBogstaver = " + antalForkerteBogstaver);
-            System.out.println("- brugeBogstaver = " + brugteBogstaver);
-            if (spilletErTabt) System.out.println("- SPILLET ER TABT");
-            if (spilletErVundet) System.out.println("- SPILLET ER VUNDET");
-            System.out.println("---------- ");
-        }*/
 
 
         public static String hentUrl(String url) throws IOException {

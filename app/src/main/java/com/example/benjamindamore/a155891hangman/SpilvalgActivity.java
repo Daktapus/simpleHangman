@@ -1,4 +1,5 @@
 //Det virker ikke helt lol
+//Bare ignore
 
 
 package com.example.benjamindamore.a155891hangman;
@@ -59,7 +60,7 @@ public class SpilvalgActivity extends AppCompatActivity implements View.OnClickL
         AlertDialog ad = new AlertDialog.Builder(this).create();
 
         ad.setCancelable(true);
-        ad.setTitle("vælg ord");
+        ad.setTitle("Vælg et ord!");
 
         LinearLayout layout = new LinearLayout(this);
         layout.setOrientation(LinearLayout.VERTICAL);
@@ -97,5 +98,6 @@ public class SpilvalgActivity extends AppCompatActivity implements View.OnClickL
         else{
             ordListDialog();
         }
+
     }
 }
