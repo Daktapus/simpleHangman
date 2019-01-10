@@ -2,6 +2,7 @@ package com.example.benjamindamore.a155891hangman;
 
 import android.content.Context;
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -142,6 +143,7 @@ public class Hangman extends AppCompatActivity implements View.OnClickListener {
         gameInfo.setText("Guess the word " + logik.getSynligtOrd());
         gameInfo.append("\n\nYou  have " + logik.getAntalForkerteBogstaver() + " wrong:" + logik.getBrugteBogstaver());
 
+
         if (logik.erSpilletVundet()) {
             gameInfo.append("\nYou won");
             StartingScreen.liste.add(new ListItemObject(score(), g.getOrdet(), g.getAntalForkerteBogstaver()));
@@ -186,7 +188,7 @@ public class Hangman extends AppCompatActivity implements View.OnClickListener {
         }
     }
     private int score (){
-        return g.getOrdet().length()*5;
+        return g.getOrdet().length();
     }
 
 }

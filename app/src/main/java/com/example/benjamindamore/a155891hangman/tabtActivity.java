@@ -28,7 +28,7 @@ public class tabtActivity extends AppCompatActivity implements View.OnClickListe
         tvtabt.setOnClickListener(this);
         score.setOnClickListener(this);
 
-        lost = MediaPlayer.create(this, R.raw.sad);
+        lost = MediaPlayer.create(this, R.raw.defeat);
 
         lost.start();
 
@@ -36,7 +36,7 @@ public class tabtActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public void onClick(View v) {
-        tvtabt.setText("Du har tabt");
+        tvtabt.setText("Du har tabt!!");
         if(v==menu){
             Intent i = new Intent(tabtActivity.this, StartingScreen.class);
             this.startActivity(i);
@@ -45,6 +45,7 @@ public class tabtActivity extends AppCompatActivity implements View.OnClickListe
             Intent i = new Intent(tabtActivity.this, ScoreActivity.class);
             this.startActivity(i);
         }
+        finish();
 
     }
 }

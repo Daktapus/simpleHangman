@@ -4,6 +4,7 @@ public class ListItemObject {
     public int highscore;
     public String ord;
     public int antalForkerteGæt;
+    galgelegLogik logik;
 
     public ListItemObject(int highscore, String ord, int antalForkerteGæt) {
         this.highscore = highscore;

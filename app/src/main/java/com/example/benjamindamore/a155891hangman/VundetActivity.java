@@ -36,7 +36,7 @@ public class VundetActivity extends AppCompatActivity implements View.OnClickLis
         won.setOnClickListener(this);
         menu.setOnClickListener(this);
 
-        winner = MediaPlayer.create(this, R.raw.tada);
+        winner = MediaPlayer.create(this, R.raw.victory);
 
 
        kv.build()
@@ -63,5 +63,6 @@ public class VundetActivity extends AppCompatActivity implements View.OnClickLis
             Intent menu = new Intent (VundetActivity.this, StartingScreen.class);
             this.startActivity(menu);
         }
+        finish();
     }
 }
