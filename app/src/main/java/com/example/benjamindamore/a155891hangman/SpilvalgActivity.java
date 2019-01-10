@@ -1,3 +1,7 @@
+//DETTE ER IKKE BLEVET IMPLEMENTERET!!!
+
+
+
 package com.example.benjamindamore.a155891hangman;
 
 import android.content.Intent;
