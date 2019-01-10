@@ -28,8 +28,12 @@
         <activity
             android:name="com.example.benjamindamore.a155891hangman.VundetActivity">
         </activity>
+
         <activity
             android:name="com.example.benjamindamore.a155891hangman.ScoreActivity">
+        </activity>
+
+        <activity android:name="com.example.benjamindamore.a155891hangman.SpilvalgActivity">
         </activity>
 
 

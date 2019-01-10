@@ -41,7 +41,7 @@ public class StartingScreen extends AppCompatActivity implements View.OnClickLis
     @Override
     public void onClick(View kkk) {
         if(kkk==button1)    {
-            Intent i = new Intent(StartingScreen.this, Hangman.class);
+            Intent i = new Intent(StartingScreen.this, SpilvalgActivity.class);
             StartingScreen.this.startActivity(i);
 
         }   else if (kkk==button2){

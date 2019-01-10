@@ -34,25 +34,6 @@ public class Hangman extends AppCompatActivity implements View.OnClickListener {
         setContentView(R.layout.activity_main);
         logik = new galgelegLogik();
 
-        //ASYNCTASK, TJEKKER OM ORDNE BLIVER HENTET ORDENTLIGT OG GIVER LISTE.
-
-        new AsyncTask() {
-            @Override
-            protected Object doInBackground(Object... arg0) {
-                try {
-                    logik.hentOrdFraDr();
-                    return "Ordene blev korrekt hentet fra DR's server";
-                } catch (Exception e) {
-                    e.printStackTrace();
-                    return "Ordene blev ikke hentet korrekt: "+e;
-                }
-            }
-
-            @Override
-            protected void onPostExecute(Object resultat) {
-                System.out.println("resultat: \n" + resultat);
-            }
-        }.execute();
 
         //stackoverflow solution to hiding keyboard on buttonclick (https://stackoverflow.com/questions/3400028/close-virtual-keyboard-on-button-press)
         inputManager = (InputMethodManager)

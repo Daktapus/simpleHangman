@@ -1,5 +1,4 @@
-//DETTE ER IKKE BLEVET IMPLEMENTERET!!!
-
+//Det virker ikke helt lol
 
 
 package com.example.benjamindamore.a155891hangman;

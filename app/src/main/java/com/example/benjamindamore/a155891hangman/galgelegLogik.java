@@ -139,7 +139,7 @@ public class galgelegLogik {
             opdaterSynligtOrd();
         }
 
-        public void logStatus() {
+        /*public void logStatus() {
             System.out.println("---------- ");
             System.out.println("- ordet (skult) = " + ordet);
             System.out.println("- synligtOrd = " + synligtOrd);
@@ -148,7 +148,7 @@ public class galgelegLogik {
             if (spilletErTabt) System.out.println("- SPILLET ER TABT");
             if (spilletErVundet) System.out.println("- SPILLET ER VUNDET");
             System.out.println("---------- ");
-        }
+        }*/
 
 
         public static String hentUrl(String url) throws IOException {
